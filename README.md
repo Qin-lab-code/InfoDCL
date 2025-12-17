@@ -5,6 +5,7 @@ Here is the official PyTorch implementation for the paper **"InfoDCL: Informativ
 This project proposes a novel framework **InfoDCL** to address the critical limitations of **random view construction** and **insufficient semantic information** in sparse recommendation scenarios. InfoDCL employs a diffusion-based process that integrates auxiliary semantics to generate authentic user preference views, and utilizes a collaborative training strategy to transform the interference between generation and preference learning into mutual collaboration.
 
 **Authors**: Xufeng Liang, Zhida Qin, Chong Zhang, Tianyu Huang, and Gangyi Ding.
+
 **Affiliation**: Beijing Institute of Technology, Xi'an Jiaotong University.
 
 ## Architecture
@@ -20,10 +21,11 @@ The code is implemented using **PyTorch**. The mainly required packages are list
 
 ```bash
 python>=3.8
-torch>=1.10.0
-numpy>=1.20.3
-scipy>=1.6.2
-torchdiffeq>=0.2.0  # For ODE solvers
+torch>=1.8.1
+numpy>=1.24.4
+scipy>=1.10.1
+pandas>=2.0.3
+scikit-learn>=1.3.0
 ```
 
 ## Usage
@@ -31,12 +33,8 @@ torchdiffeq>=0.2.0  # For ODE solvers
 <ol> <li>Data Preparation: Download the datasets from <a href="https://jmcauley.ucsd.edu/data/amazon/">Amazon Review Data</a> and MovieLens, and place them in the <code>dataset/</code> directory.</li>  <li>Training: Run the main script to train and evaluate the model:</li> </ol>
 
 ```bash
-python main.py --model TGODE --dataset Beauty
+./office.sh
 ```
-
-## Implemented Models
-
-<table class="table table-hover table-bordered"> <tr> <th>Model</th>         <th>Paper</th>      <th>Type</th>   <th>Code</th> </tr> <tr> <td scope="row">TGODE</td> <td>Fu et al. <a href="https://doi.org/10.1145/3711896.3737156" target="_blank">Time Matters: Enhancing Sequential Recommendations with Time-Guided Graph Neural ODEs</a>, KDD '25. </td> <td>GNN + ODE + Diffusion</td> <td><a href="https://github.com/fhy99/TGODE">PyTorch</a> </td> </tr> </table>
 
 ## Related Datasets
 
@@ -55,11 +53,9 @@ If you find this repo helpful to your research, please cite our paper :
 
 ```BibTeX
 @inproceedings{fu2025time,
-  title={Time Matters: Enhancing Sequential Recommendations with Time-Guided Graph Neural ODEs},
-  author={Fu, Haoyan and Qin, Zhida and Yang, Shixiao and Zhang, Haoyao and Lu, Bin and Li, Shuang and Huang, Tianyu and Lui, John CS},
-  booktitle={Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V. 2},
-  pages={637--648},
-  year={2025}
+  title={InfoDCL: Informative Noise Enhanced Diffusion Based Contrastive Learning},
+  author={Xufeng Liang, Zhida Qin, Chong Zhang, Tianyu Huang, and Gangyi Ding},
+  booktitle={Proceedings of the 32st ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
 }
 
 ```
