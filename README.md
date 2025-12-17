@@ -52,7 +52,7 @@ We conduct extensive experiments on five real-world datasets. The statistics are
 If you find this repo helpful to your research, please cite our paper :
 
 ```BibTeX
-@inproceedings{fu2025time,
+@inproceedings{liang2025Diff,
   title={InfoDCL: Informative Noise Enhanced Diffusion Based Contrastive Learning},
   author={Xufeng Liang, Zhida Qin, Chong Zhang, Tianyu Huang, and Gangyi Ding},
   booktitle={Proceedings of the 32st ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
