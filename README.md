@@ -2,6 +2,8 @@
 
 Here is the official PyTorch implementation for the paper **"InfoDCL: Informative Noise Enhanced Diffusion Based Contrastive Learning"**, which has been accepted by **KDD '26**.
 
+For more details, please refer to https://dl.acm.org/doi/10.1145/3770854.3780288
+
 This project proposes a novel framework **InfoDCL** to address the critical limitations of **random view construction** and **insufficient semantic information** in sparse recommendation scenarios. InfoDCL employs a diffusion-based process that integrates auxiliary semantics to generate authentic user preference views, and utilizes a collaborative training strategy to transform the interference between generation and preference learning into mutual collaboration.
 
 **Authors**: Xufeng Liang, Zhida Qin, Chong Zhang, Tianyu Huang, and Gangyi Ding.
@@ -35,6 +37,10 @@ scikit-learn>=1.3.0
 ```bash
 ./office.sh
 ```
+
+## Implemented Models
+
+<table class="table table-hover table-bordered"> <tr> <th>Model</th>         <th>Paper</th>      <th>Type</th>   <th>Code</th> </tr> <tr> <td scope="row">InfoDCL>Info <td>Fu et al. <a href="https://doi.org/10.1145/3770854.3780288" target="_blank">InfoDCL: Informative Noise Enhanced Diffusion Based Contrastive Learning</a>, KDD '26. </td> <td>CL + Diffusion</td> <td><a href="https://github.com/Qin-lab-code/InfoDCL">PyTorch</a> </td> </tr> </table>
 
 ## Related Datasets
 
